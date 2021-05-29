@@ -1,7 +1,7 @@
 import pygame
 
 
-class Boy():
+class Boy:
     def __init__(self, settings, screen):
         """Инициализирует персонажа и задает его начальное положение."""
         self.settings = settings
@@ -50,4 +50,3 @@ class Boy():
 
     def center_boy_x(self):
         self.center = self.screen_rect.centerx
-

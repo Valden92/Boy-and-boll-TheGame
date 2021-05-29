@@ -1,7 +1,7 @@
 import pygame.font
 
 
-class Button():
+class Button:
     """Класс управляющий изображением кнопок на кэране."""
 
     def __init__(self, screen, msg):

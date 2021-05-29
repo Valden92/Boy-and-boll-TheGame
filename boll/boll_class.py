@@ -18,7 +18,6 @@ class Boll(Sprite):
 
         # self.rect.y = random.randrange(-500, -10)
 
-
         self.drop_factor = self.settings.boll_increment
         self.rect.x = self.rect.width
         self.rect.y = self.screen_rect.top - self.rect.height
@@ -33,5 +32,3 @@ class Boll(Sprite):
     def draw_boll(self):
         """Выводит изображение на экран."""
         self.screen.blit(self.image, self.rect)
-
-

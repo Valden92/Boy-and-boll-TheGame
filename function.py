@@ -5,7 +5,6 @@ from random import randint
 from boll.boll_class import Boll
 
 
-
 # ОБНОВЛЕНИЕ ЭКРАНА И ВЗАИМОДЕЙСТВИЕ С КЛАВИАТУРОЙ
 
 def check_keydown_events(event, settings, screen, stats, boy, bolls, sb):
@@ -42,7 +41,6 @@ def check_events(settings, screen, stats, boy, bolls, play_button, sb):
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
             check_play_button(settings, screen, stats, bolls, play_button, sb, mouse_x, mouse_y)
-
 
 
 def update_screen(settings, screen, stats, boy, bolls, play_button, sb):
@@ -104,15 +102,6 @@ def create_boll(settings, screen, bolls):
     boll.rect.x = randint(70, settings.screen_width - 70)
     bolls.add(boll)
 
-# def create_bolls(settings, screen, bolls):
-#     """Создает ряд мячей."""
-#     if len(bolls) < settings.boll_allowed:
-#         if settings.boll_allowed > 1:
-#             for num in range(settings.boll_allowed):
-#                 create_boll(settings, screen, bolls)
-#         else:
-#             create_boll(settings, screen, bolls)
-
 
 def bolls_update(settings, screen, stats, boy, bolls, sb):
     """Обновляет позиции мячей."""
@@ -161,6 +150,3 @@ def level_up(settings, stats, sb):
         stats.level += 1
         sb.prep_level()
         settings.increase_speed()
-
-
-

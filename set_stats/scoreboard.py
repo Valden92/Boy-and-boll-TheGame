@@ -3,7 +3,7 @@ from pygame.sprite import Group
 from boy.life_class import BoyLife
 
 
-class Scoreboard():
+class Scoreboard:
     """Класс для вывода игровой информации и статистики."""
 
     def __init__(self, settings, screen, stats):
@@ -24,7 +24,6 @@ class Scoreboard():
         self.prep_high_score()
         self.prep_level()
         self.prep_lifes()
-
 
     def prep_score(self):
         """Преобразует текущий счет в графическое изображение."""
@@ -60,7 +59,7 @@ class Scoreboard():
         high_score = self.stats.high_score
         high_score_str = "{:,}".format(high_score)
         self.high_score_image = self.num_font.render(high_score_str, True,
-                                                 self.num_color, self.settings.bg_color)
+                                                     self.num_color, self.settings.bg_color)
         # Рекорд выравнивается по центру с верхней стороны
         self.high_score_rect = self.high_score_image.get_rect()
         self.high_score_rect.centerx = self.screen_rect.centerx
@@ -75,7 +74,7 @@ class Scoreboard():
     def prep_level(self):
         """Преобразует счетчик уровня в изображение."""
         self.level_image = self.num_font.render(str(self.stats.level), True,
-                                            self.num_color, self.settings.bg_color)
+                                                self.num_color, self.settings.bg_color)
         # Уровень выводится под текущим счетом
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right

@@ -1,7 +1,7 @@
 import pygame
 
 
-class SettingsGame():
+class SettingsGame:
     """Класс для хранения настроек игры."""
 
     def __init__(self):
